@@ -1,0 +1,12 @@
+---
+# vars file for azure-infra
+
+resource_group: builder-hive-rg
+location: eastus
+virtualnetwork: engineerai
+subnet: subnet-pub1
+vm_name: builderhive-stage
+vmsize: Standard_D2s_v3
+storage_name: bhive-staging
+container_name: bhive-staging-assets
+public_access: container

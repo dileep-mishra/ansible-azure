@@ -1,0 +1,20 @@
+---
+
+  - name: Create VM
+    azure_rm_virtualmachine:
+      resource_group: "{{resource_group}}"
+      name: "{{vm_name}}"
+      vm_size: "{{vmsize}}"
+      admin_username: ubuntu
+      admin_password: "{{ password }}"
+      ssh_public_keys:
+      - path: /home/ubuntu/.ssh/authorized_keys
+        key_data: <--- your public key --->
+      managed_disk_type: StandardSSD_LRS
+      virtual_network_resource_group: AI-rg
+      virtual_network_name: "{{virtualnetwork}}"
+      image:
+        offer: UbuntuServer 
+        publisher: Canonical 
+        sku: '18.04-LTS'
+        version: latest

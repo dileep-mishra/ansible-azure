@@ -1,0 +1,3 @@
+---
+# tasks file for azure-infra
+ - import_tasks: storage_account.yml

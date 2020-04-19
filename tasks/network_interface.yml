@@ -1,0 +1,13 @@
+---
+
+   - name: Create a network interface
+     azure_rm_networkinterface:
+       name: webNic
+       resource_group: "{{resource_group}}"
+       virtual_network: "{{virtualnetwork}}"
+       subnet_name: "{{subnet}}}"
+       ip_configurations:
+         - name: ipconfig1
+           public_ip_address_name: publicip
+           primary: True
+

@@ -1,0 +1,9 @@
+---
+
+      - name: Create container foo and upload a file
+        azure_rm_storageblob:
+          resource_group: "{{resource_group}}"
+          storage_account_name: "{{storage_name}}"
+          container: "{{container_name}}"
+          public_access: "{{public_access}}"
+          content_type: 'application/image'
